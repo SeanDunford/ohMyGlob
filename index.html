@@ -1,0 +1,117 @@
+<html> 
+<head> 
+<link href="http://fnt.webink.com/wfs/webink.css/?project=29039664-B1EF-4215-8FF3-76BDE6923E92&fonts=880096C9-42EC-CFB6-C094-7540101C8F7B:f=Aller-BoldItalic,521D5111-7D3C-B8EC-88B6-BBED2BE5F224:f=Aller-LightItalic,32A3E230-3101-A662-F6D5-D8B9D0A38A5B:f=Aller-Regular,1B6C2E6C-BB21-53D3-2175-C814D91AD16C:f=Aller-Bold,C7662775-65E4-3DE5-DE19-D61377E1BE79:f=Aller-Light,9C5DF801-C745-E177-908F-369BCECD52B7:f=Aller-Italic" rel="stylesheet" type="text/css"/><link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<link rel=StyleSheet href="style/knotchData.css" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="javascript/getKnotchData.js" type="text/javascript"></script>	
+<script src="javascript/handlebars.js" type="text/javascript"></script>
+<script type="text/javascript">
+	window.onload = function (event) {
+		var userID = "5019296f1f5dc55304003c58",
+			count = "100";
+			window.isProxyOn = false; //make false if not using the wsgy server I built
+  			knotchMiniProj.getKnotchUserFeed( userID, count);
+}
+</script>
+<script id="handleBarsTest" type="text/x-handlebars-template">
+	<div class="entry">
+	  <h1>{{title}}</h1>
+	  <div class="body">
+	    {{body}}
+	  </div>
+	</div>
+	</script>
+<script id="knotchComment" type="text/x-handlebars-template">
+	<div class="usersOpinionSpacer">&nbsp;</div>
+	<div class="comment">
+		<a href = "http://www.knotch.it/{{commentorsName}}" class="mention" ><img src="{{commentorsPicture}}" alt="commentorsAvatar" class="replyAvatar" height="30" width="30"></a>
+		<div class = "reply">
+			<a class="mention" href="http://www.knotch.it/{{commentorsName}}"> {{commentorsName}}</a>
+			<span class="reply"> &nbsp;"{{{commentorsReply}}}"</span>
+		</div>
+	</div></script>
+<script id="knotch" type="text/x-handlebars-template">
+	<div class="smallSpacer"></div>
+	<div class="knotchHeader">
+		<div class="knotchHeaderSpacer">&nbsp;</div>
+		<div class="knotchHeaderTitle"><a class ="knotchTitle" href="http://www.knotch.it/topic/{{knotchTitle}}">{{knotchTitle}}
+		</div>
+		<div class="knotchHeaderArrow">
+			<a href="http://www.knotch.it/topic/{{topicID}}"><img src = "assets/topic-arrow.png" alt="goToTopic"></a>
+		</div>
+	</div>
+	<div class="clear-left"></div>
+	<div class="usersOpinionSpacer">&nbsp;</div>
+	<div class = "usersOpinionBubble" style = "background-color: {{color}}; border:{{border}};" >
+		<div class="usersOpinion">{{{knotchersOpinion}}}</div>
+	</div>
+	<div class="clear-left"></div>
+	<div class="knotchBoxSpacer">&nbsp;</div>
+	<div class="knotchBox">
+		<img class ="knotchTriangle" src = "knotchBoxes/triangle{{triangleCode}}.png" alt="goToKnotch">
+	</div>
+	<div class="smallSpacer"></div>
+	<div class="usersOpinionSpacer">&nbsp;</div>
+	<div class="knotchOwner">
+		<a href="http://www.knotch.it/{{knotchersName}}"><img width="60px" class="userImage" src="{{knotchersPicture}}"></a><a class = "knotchTitle"href="http://www.knotch.it/{{knotchersName}}"><span class ="UserName">{{knotchersName}}</span></a>
+	</div>
+	<!-- Reusable comment Code -->
+	<div id = "commentsContainer"></div>
+</script>
+<script id="newCommentBox" type="text/x-handlebars-template">
+	<div class="usersOpinionSpacer">&nbsp;</div>
+	<div class="comment">
+		<input type="text"  id="{{commentBoxID}}" onkeypress="return knotchMiniProj.newComment_OnKeyPress(event)" onfocus="knotchMiniProj.inputFocus(this)" onblur="knotchMiniProj.inputBlur(this)" class ="newCommentBox" value="Comment on this knotch...">
+	</div>
+	<div class="clear-left"></div>
+</script>
+</head> 
+<body> 
+	<div id="header" background="assets/nav-bar.png">
+		<div class="logo">
+			<a href="http://www.knotch.it/"><img id="knotchLogo" src="assets/knotch-logo.png" alt="knotchLogo" ></a>
+		</div>
+		<div class="name">
+			<h1 class="userName"></h1>
+		</div>
+		<img width="100%" src="assets/headerGradient.gif">
+		<div class="clear-left"></div>
+	</div>
+	<div class="userInformation">
+		<img id = "profileImage" class = "userImage" src="" alt="userPicture" height="100" width="100" >
+		<h1 class ="userName">&nbsp;</h1>
+		<h2 id ="userLocation">San Francisco, California</h2>
+		<div class="smallSpacer"></div>
+		<!-- possibly use semantic list definition list with pipe in after property  -->
+		<div id="userStatsContainer">
+			<div class="userStatsSpacer">&nbsp;</div>
+			<div class="UserStats">
+				<span class ="userStatsNumber" id="TopicStatsNumber"> 		 </span>
+				<span class ="userStats" id="topicStats"> Topics</span>
+			</div>
+			<div class="pipeSpacing">|</div>
+			<div class="UserStats">
+				<span class ="userStatsNumber" id="FollowersStatsNumber"> 	 </span>
+				<span class ="userStats" id="FollowersStats">	Followers</span>
+			</div>
+			<div class="pipeSpacing">|</div>
+			<div class="UserStats">
+				<span class ="userStatsNumber" id="FollowingStatsNumber"> 	 </span>
+				<span class ="userStats" id="FollowingStats">Following</span>
+			</div>
+			<div class="pipeSpacing">|</div>
+			<div class="UserStats">
+				<span class ="userStatsNumber" id="GloryStatsNumber"> 		 </span>
+				<span class ="userStats" id="GloryStats">Glory</span>
+			</div>
+		</div>
+		<div class="smallSpacer"></div>
+		<div class ="colorDispersionContainer">
+			<img src="assets/knotch-sentnements-bar.png" alt="colorDispersion">
+		</div>
+	</div>
+	<!--Reusable Topic/Comment Markup-->
+	<div class="knotchContainer">
+			</div>
+	</body> 
+	</html>

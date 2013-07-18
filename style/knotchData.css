@@ -1,0 +1,219 @@
+
+	h1 {
+		padding: 0;
+		margin: 0;
+		font-family: Aller-Regular, sans-serif; 
+		font-weight: 300; 
+		font-size: 23; 
+		vertical-align: center; 
+		margin-top: 10px; 
+	}
+	h2 {
+		padding: 0;
+		margin: 0;
+		color: #b3b3b3;
+		font-family: Aller-Light, sans-serif;
+		font-weight: 100; 
+		font-size: 19; 
+	}
+	h3 {
+		padding: 0;
+		margin: 0;
+		font-family: Aller-Regular, sans-serif;
+		font-weight: 300; 
+		font-size: 19;
+	}
+	#header {
+		width: 100%;
+	}
+	div.logo {
+		float: left;
+		width: 10%;
+
+	}
+	#knotchLogo{
+		margin-left: 10px;
+		margin-bottom: 5px;
+	}
+	div.name {
+		float: left;
+		width: 80%;
+		text-align: center;
+	}
+	div.clear-left {
+		width: 10%;
+		clear: left;
+	}
+	div.userInformation{
+		background-color: #f9f8f8; 
+
+	}
+	div.smallSpacer{
+		height:1.5em;
+	}
+	div.userInformation{
+		text-align: center; 
+	}
+	div.colorDispersionContainer{
+		background-color: #273137;
+		text-align: center; 
+		padding-top: 20px;
+		margin-bottom: 20px;  
+		padding-bottom: 20px;
+		height: 10px; 
+	}
+	div.UserStats{
+		float: left;
+		width: 9%;
+		text-align: left;
+	}
+	div.userStatsContainer{
+		width: 100%;
+	}
+	div.userStatsSpacer{
+		float: left;
+		width: 29%;
+	}
+	span.userStats{
+		font-family: Lato, sans-serif;
+		font-weight: 400; 
+		font-size: 15; 
+	}
+	span.userStatsNumber{
+		font-family: Lato, sans-serif;
+		font-weight: 500;
+		font-size: 15;  
+		width: 0.5%;
+	}
+	div.pipeSpacing{
+		float: left;
+		width: 2%;
+		text-align: center;
+	}
+	div.knotchHeaderSpacer{
+		float: left;
+		width: 30%;
+		text-align: center;
+	}
+	div.knotchHeaderTitle{ 
+		float: left;
+		width: 25%;
+		text-align: left;
+		padding: 0;
+		margin: 0;
+		font-family: Aller-Regular, sans-serif;
+		font-weight: 100; 
+		font-size: 23;
+	}
+	div.knotchHeaderArrow{
+		float: left;
+		width: 30%;
+		text-align: center;
+	}
+	div.usersOpinionBubble{
+		background-color: #2e5ca6; 
+		height: 200px;
+		width:  41%;
+		float: left;
+		margin-top: 10px;
+	}
+	#whiteBubble{
+		border: 1px solid #000000; 
+	}
+	img.replyAvatar{
+		float: left; 
+
+	}
+	div.usersOpinion{
+		margin-right:  50px;
+		margin-left:   50px;
+		margin-top:	   50px;
+		margin-bottom: 50px; 
+		font-family: Lato, sans-serif;
+		font-weight: 500; 
+		font-size: 18; 
+
+	}
+	div.usersOpinionSpacer{
+		width:  30%;
+		float: left;
+	}
+	div.knotchBoxSpacer{
+		width:	31%;
+		float:	left;
+	}
+	div.knotchBox{
+		width: 65%;
+		float:	left;
+	}
+	div.comment{
+		width: 43%;
+		float:	left;
+		margin-top: 5px; 
+		margin-bottom: 5px; 
+	}
+	div.knotchOwner{
+		width: 65%;
+		float:	left;
+		text-align: left;
+		padding: 0;
+		margin: 0;
+		font-family: Aller-Regular, sans-serif;
+		font-weight: 300; 
+		font-size: 17;
+	}
+	span.userName{
+		margin-left: 10px;
+	}
+	div.reply {
+		margin-top: 10px; 
+		margin-left: 15px; 
+		float: left;
+		width: 90%; 
+		font-family: Aller-Regular, sans-serif;
+		font-weight: 300; 
+		font-size: 15;
+		vertical-align: center; 	
+	}
+	a.mention{
+		color: #ee443a; 
+		font-family: Aller-Regular, sans-serif;
+		font-weight: 300; 
+		text-decoration: none;
+		font-size: 15;	
+	}
+	a.opinionMention{
+		color: black; 
+		font-family: Lato, sans-serif;
+		font-weight: 500; 
+		font-size: 18; 	
+		/*kept it underlined so link was noticible for all sentiments*/
+	}
+	a.knotchTitle{
+		color: black;
+		text-decoration: none;
+	}
+	input.newCommentBox {
+		border: 3px solid #e2e2e2; 
+		color: #b3b3b3; 
+		width: 95%;
+		font-family: Lato, sans-serif;
+		font-weight: 400; 
+		font-size: 15;
+		margin-bottom: 15px;  
+		margin-right: 20px; 
+		padding-top: 20px; 
+		padding-bottom: 20px;  
+		padding-left: 20px; 
+		padding-right: 20px; 
+	}
+	div.knotchContainer {
+
+	}
+	img.knotchTriangle{
+		margin-bottom: 10px; 
+	}
+	#profileImage{
+		min-width: 100px; 
+		margin-top: 10px; 
+	}
